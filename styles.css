@@ -346,7 +346,7 @@ body {
 .project-video-wrap {
   width: 40%;
   max-width: 40%;
-  height: auto;
+  height: 120px;
   margin: 0 auto;
   overflow: hidden;
 }

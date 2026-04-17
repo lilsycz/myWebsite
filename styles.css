@@ -344,8 +344,8 @@ body {
   padding-top: 0;
 }
 .project-video-wrap {
-  width: 40%;
-  max-width: 40%;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }

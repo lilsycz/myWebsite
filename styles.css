@@ -343,9 +343,15 @@ body {
 .project-video-section {
   padding-top: 0;
 }
+.project-video-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
 .project-video {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   background: #000;
 }

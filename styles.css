@@ -340,6 +340,15 @@ body {
   text-align: right;
   font-family: 'DM Mono', monospace;
 }
+.project-video-section {
+  padding-top: 0;
+}
+.project-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
 
 /* ── DETAIL PANEL ── */
 .detail-panel {

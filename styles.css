@@ -344,6 +344,15 @@ body {
   padding-top: 0;
   overflow: hidden;
 }
+.project-video-note {
+  box-sizing: border-box;
+  width: min(100%, calc(100vw - var(--left-rail-w) - var(--sidebar-w) - 80px));
+  max-width: 100%;
+  margin: 0 auto 14px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: white;
+}
 .project-video-wrap {
   box-sizing: border-box;
   width: min(100%, calc(100vw - var(--left-rail-w) - var(--sidebar-w) - 80px));
@@ -949,5 +958,13 @@ body {
   .project-video-wrap {
     width: 100%;
     max-width: 100%;
+  }
+
+  .project-video-note {
+    width: 100%;
+    max-width: 100%;
+    font-size: 13px;
+    margin-bottom: 12px;
+    color: white;
   }
 }

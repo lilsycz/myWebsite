@@ -6,7 +6,9 @@ function goSkill(n) {
   n = Math.max(0, Math.min(2, n));
   curSkill = n;
   var cols = document.querySelectorAll('.skills-col');
+  if (!cols.length) return;
   var w = cols[0].offsetWidth;
+  if (!w) return;
   document.getElementById('skillsTrack').style.transform = 'translateX(-' + (n * w) + 'px)';
   document.querySelectorAll('#skillDots .skills-dot').forEach(function(d, i) {
     d.classList.toggle('act', i === n);

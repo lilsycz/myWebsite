@@ -150,7 +150,12 @@ body {
   color: var(--black);
   margin-bottom: 32px;
   text-align: right;
+  text-decoration: none;
+  transition: color 0.15s ease;
 }
+.sidebar-name:hover,
+.sidebar-name:focus-visible,
+.sidebar-name:active { color: rgba(17,17,17,0.45); }
 .sidebar-link {
   font-size: 14px;
   color: var(--black);
@@ -587,37 +592,16 @@ body {
   color: var(--green-accent);
   font-family: 'DM Mono', monospace;
 }
-.skills-nav { display: flex; align-items: center; gap: 10px; }
-.skills-dots { display: flex; gap: 5px; }
-.skills-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #222;
-  cursor: pointer;
-  transition: background 0.15s;
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 36px;
+  padding: 0 40px 0 36px;
 }
-.skills-dot.act { background: var(--green-accent); }
-.sk-arr {
-  width: 24px; height: 24px;
-  border: 0.5px solid #222;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer;
-  transition: border-color 0.15s;
-  background: transparent;
-}
-.sk-arr:hover { border-color: var(--green-accent); }
-.sk-arr svg { width: 9px; height: 9px; stroke: #555; fill: none; stroke-width: 1.5; }
-.sk-arr:hover svg { stroke: var(--green-accent); }
-
-.skills-overflow { overflow: hidden; }
-.skills-track {
+.skills-stack {
   display: flex;
-  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
-  will-change: transform;
+  flex-direction: column;
 }
-.skills-col { flex-shrink: 0; width: 100%; padding: 0 40px 0 36px; }
-.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; }
 .skill-group { margin-bottom: 22px; }
 .skill-group-label {
   font-size: 12px;
@@ -811,6 +795,7 @@ body {
   }
 
   .sidebar-name {
+    display: inline-block;
     margin-right: auto;
     margin-bottom: 0;
     font-size: 11px;
@@ -932,11 +917,8 @@ body {
     gap: 12px;
   }
 
-  .skills-col {
-    padding: 0 16px 0 0;
-  }
-
   .skills-grid {
+    padding: 0 16px 0 0;
     grid-template-columns: 1fr;
     gap: 0;
   }

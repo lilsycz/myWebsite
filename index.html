@@ -39,7 +39,7 @@
 <!-- SIDEBAR -->
 <nav class="sidebar">
   <div class="sidebar-inner">
-    <div class="sidebar-name">JC</div>
+    <a class="sidebar-name" href="#top">JC</a>
     <a class="sidebar-link active" href="#projects">Work</a>
     <a class="sidebar-link" href="#experience">Experience</a>
     <div class="sidebar-group">
@@ -105,7 +105,7 @@
     <div class="proj-thumb"><div class="tp2"></div></div>
     <div>
       <div class="proj-name">Refab Lab — Web & Brand Redesign</div>
-      <div class="proj-cat">HTML · CSS · JS · WordPress</div>
+      <div class="proj-cat">HTML · CSS · JS · Shopify · WordPress</div>
     </div>
     <span class="proj-type">Live</span>
     <span class="proj-yr">2026</span>
@@ -115,17 +115,19 @@
       <div class="detail-title">Refab Lab — Web & Brand Redesign</div>
       <a class="detail-link" href="#" target="_blank">View Site ↗</a>
     </div>
-    <div class="detail-meta">HTML / CSS / JavaScript · WordPress · Shopify · Malmö, Sweden</div>
+    <div class="detail-meta">HTML / CSS / JavaScript · Shopify · WordPress · Shopify · Malmö, Sweden</div>
     <ul class="detail-bullets">
-      <li>Independently delivered a full website redesign: implemented frontend in HTML/CSS/JavaScript with WordPress and Shopify, establishing UI guidelines for consistent visual expression across breakpoints.</li>
+      <li>Independently built a complete Shopify e-commerce presence from scratch, including store setup, product page design, theme customisation, and end-to-end purchase flow， establishing UI guidelines for consistent visual expression across breakpoints.</li>
+      <li>Developed two custom booking calendars with intractive booking system, image previews and direct product links using Liquid and JavaScript.</li>
       <li>Rebuilt information architecture and service entry flow, reducing the booking journey from 5 steps to 2, applying conversion thinking and UX logic to measurably improve user behavior.</li>
+      <li>Implemented tag-based access control to display different page layouts and content to different customer groups. Restructured website content and information architecture with SEO foundations to improve organic visibility.</li>
       <li>Built complete visual identity system: typography, color palette, layout rules, and UI guidelines ensuring consistent brand expression across all touchpoints.</li>
     </ul>
     <div class="detail-tags">
       <span class="detail-tag">HTML5</span>
       <span class="detail-tag">CSS3</span>
       <span class="detail-tag">JavaScript</span>
-      <span class="detail-tag">WordPress</span>
+      <span class="detail-tag">Shopify</span>
       <span class="detail-tag">Figma</span>
       <span class="detail-tag">Brand Design</span>
     </div>
@@ -226,7 +228,7 @@
 </section>
 
 <section class="s-black project-video-section" aria-label="Project video">
-  <div class="project-video-note">TreeHouse项目，是一个快速的面试任务，从概念设计到模型和视频制作都在3天内完成。<br>（后来得到了位于丹麦的该岗位offer，但因为签证没去成）</div>
+  <div class="project-video-note">TreeHouse项目，是一个快速的面试任务，从概念设计到模型和视频制作都在3天内完成。<br>（后来得到了位于丹麦的该岗位offer，但因为签证时间问题没去成）</div>
   <div class="project-video-wrap">
     <video class="project-video" controls preload="metadata">
       <source src="images/treehouse_jadechen.mp4" type="video/mp4">
@@ -246,13 +248,14 @@
     </div>
     <div class="exp-org">Refab Lab AB · Malmö, Sweden · Part-time</div>
     <ul class="exp-bullets">
-      <li>Independently delivered full website redesign; designed in Figma, developed in HTML/CSS/JavaScript with WordPress. Established typography, color, layout, and UI guidelines for consistent digital brand expression.</li>
-      <li>Rebuilt information architecture and service entry points; streamlined booking flow from 5 steps to 2, reducing decision time and improving conversion.</li>
-      <li>Maintained and iterated on the live website post-launch, managing version control and deployment workflow for a production site.</li>
+      <li>Independently built a complete Shopify e-commerce presence from scratch, including store setup, product page design, theme customisation, and end-to-end purchase flow， establishing UI guidelines for consistent visual expression across breakpoints.</li>
+      <li>Developed two custom booking calendars with intractive booking system, image previews and direct product links using Liquid and JavaScript.</li>
+      <li>Built information architecture and service entry flow, reducing the booking journey from 5 steps to 2, applying conversion thinking and UX logic to measurably improve user behavior.</li>
+      <li>Implemented tag-based access control to display different page layouts and content to different customer groups. Restructured website content and information architecture with SEO foundations to improve organic visibility.</li>
     </ul>
     <div class="exp-tags">
       <span class="exp-tag">HTML/CSS/JS</span>
-      <span class="exp-tag">WordPress</span>
+      <span class="exp-tag">Shopify</span>
       <span class="exp-tag">Figma</span>
       <span class="exp-tag">Brand Design</span>
       <span class="exp-tag">Git</span>
@@ -322,79 +325,52 @@
     <div class="about-right-wrap">
       <div class="about-right-header">
         <div class="about-right-label">Skills</div>
-        <div class="skills-nav">
-          <div class="skills-dots" id="skillDots">
-            <div class="skills-dot act" onclick="goSkill(0)"></div>
-            <div class="skills-dot" onclick="goSkill(1)"></div>
-            <div class="skills-dot" onclick="goSkill(2)"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skills-stack">
+          <div class="skill-group">
+            <div class="skill-group-label">Frontend</div>
+            <div class="skill-row"><span class="skill-name">HTML5 / CSS3</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:90%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">JavaScript</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:78%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">React.js</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:68%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">TypeScript</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:50%"></div></div></div>
           </div>
-          <div class="sk-arr" onclick="goSkill(curSkill-1)">
-            <svg viewBox="0 0 9 9"><polyline points="5.5,1.5 2.5,4.5 5.5,7.5"/></svg>
+          <div class="skill-group">
+            <div class="skill-group-label">Workflow</div>
+            <div class="skill-row"><span class="skill-name">MS Office</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:62%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Git / Version Control</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:75%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">REST API Integration</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:65%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Shopify / WordPress</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:72%"></div></div></div>
           </div>
-          <div class="sk-arr" onclick="goSkill(curSkill+1)">
-            <svg viewBox="0 0 9 9"><polyline points="3.5,1.5 6.5,4.5 3.5,7.5"/></svg>
+          <div class="skill-group">
+            <div class="skill-group-label">Architecture & 3D</div>
+            <div class="skill-row"><span class="skill-name">Rhino + Grasshopper</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:85%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Revit / AutoCAD</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:80%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">SketchUp</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:82%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Blender</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:60%"></div></div></div>
           </div>
         </div>
-      </div>
-      <div class="skills-overflow">
-        <div class="skills-track" id="skillsTrack">
-
-          <div class="skills-col">
-            <div class="skills-grid">
-              <div class="skill-group">
-                <div class="skill-group-label">Frontend</div>
-                <div class="skill-row"><span class="skill-name">HTML5 / CSS3</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:90%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">JavaScript (ES6+)</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:78%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">React.js</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:68%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">TypeScript</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:50%"></div></div></div>
-              </div>
-              <div class="skill-group">
-                <div class="skill-group-label">Workflow</div>
-                <div class="skill-row"><span class="skill-name">Redux</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:62%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Git / Version Control</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:75%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">REST API Integration</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:65%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">WordPress / Shopify</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:72%"></div></div></div>
-              </div>
-            </div>
+        <div class="skills-stack">
+          <div class="skill-group">
+            <div class="skill-group-label">Visualisation</div>
+            <div class="skill-row"><span class="skill-name">V-Ray / Enscape</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:78%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Unreal Engine 5</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:55%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Unity</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:48%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Applied Robotics</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:60%"></div></div></div>
           </div>
-
-          <div class="skills-col">
-            <div class="skills-grid">
-              <div class="skill-group">
-                <div class="skill-group-label">Architecture & 3D</div>
-                <div class="skill-row"><span class="skill-name">Rhino + Grasshopper</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:85%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Revit / AutoCAD</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:80%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">SketchUp</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:82%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Blender</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:60%"></div></div></div>
-              </div>
-              <div class="skill-group">
-                <div class="skill-group-label">Visualisation</div>
-                <div class="skill-row"><span class="skill-name">V-Ray / Enscape</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:78%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Unreal Engine 5</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:55%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Unity</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:48%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Applied Robotics</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:60%"></div></div></div>
-              </div>
-            </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Design & UX</div>
+            <div class="skill-row"><span class="skill-name">Figma</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:82%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Adobe Illustrator</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:80%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Adobe Photoshop</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:76%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Adobe InDesign</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:80%"></div></div></div>
           </div>
-
-          <div class="skills-col">
-            <div class="skills-grid">
-              <div class="skill-group">
-                <div class="skill-group-label">Design & UX</div>
-                <div class="skill-row"><span class="skill-name">Figma</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:82%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Adobe Illustrator</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:80%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Adobe Photoshop</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:76%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">InDesign</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:80%"></div></div></div>
-              </div>
-              <div class="skill-group">
-                <div class="skill-group-label">Languages</div>
-                <div class="skill-row"><span class="skill-name">Mandarin (Native)</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:100%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">English (Fluent)</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:90%"></div></div></div>
-                <div class="skill-row"><span class="skill-name">Swedish (Conversational)</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:55%"></div></div></div>
-              </div>
-            </div>
+          <div class="skill-group">
+            <div class="skill-group-label">Languages</div>
+            <div class="skill-row"><span class="skill-name">Mandarin (Native)</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:100%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">English (Fluent)</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:90%"></div></div></div>
+            <div class="skill-row"><span class="skill-name">Swedish</span><div class="skill-bar-bg"><div class="skill-bar-fg" style="width:55%"></div></div></div>
           </div>
-
         </div>
       </div>
     </div>

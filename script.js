@@ -1,19 +1,5 @@
-var curSkill = 0;
 var posterNameOverlap = document.querySelector('.poster-name-overlap');
 var posterDarkSections = document.querySelectorAll('.s-black, .about-section, .footer');
-
-function goSkill(n) {
-  n = Math.max(0, Math.min(2, n));
-  curSkill = n;
-  var cols = document.querySelectorAll('.skills-col');
-  if (!cols.length) return;
-  var w = cols[0].offsetWidth;
-  if (!w) return;
-  document.getElementById('skillsTrack').style.transform = 'translateX(-' + (n * w) + 'px)';
-  document.querySelectorAll('#skillDots .skills-dot').forEach(function(d, i) {
-    d.classList.toggle('act', i === n);
-  });
-}
 
 function tog(id) {
   var d = document.getElementById('d' + id);
@@ -21,6 +7,12 @@ function tog(id) {
   document.querySelectorAll('.detail-panel').forEach(function(p) { p.classList.remove('open'); });
   if (!open) d.classList.add('open');
 }
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    document.querySelectorAll('.detail-panel').forEach(function(p) { p.classList.remove('open'); });
+  }
+});
 
 function updatePosterNameContrast() {
   if (!posterNameOverlap) return;
@@ -89,7 +81,6 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('resize', function() {
-  goSkill(curSkill);
   updateActiveSidebarLink();
   updatePosterNameContrast();
 });

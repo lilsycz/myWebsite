@@ -314,6 +314,11 @@ body {
 .tp2 { background: repeating-linear-gradient(90deg,#1a1a1a,#1a1a1a 3px,#222 3px,#222 9px); width:100%;height:100%; }
 .tp3 { background: repeating-linear-gradient(0deg,#1c1c1c,#1c1c1c 2px,#232323 2px,#232323 7px); width:100%;height:100%; }
 .tp4 { background: repeating-linear-gradient(135deg,#1d1d1d,#1d1d1d 2px,#232323 2px,#232323 7px); width:100%;height:100%; }
+.tp5 { background: linear-gradient(135deg, #1a1a1a 0%, #284232 100%); width:100%;height:100%; }
+.tp6 { background: linear-gradient(135deg, #101010 0%, #1f3027 100%); width:100%;height:100%; }
+.tp7 { background: linear-gradient(135deg, #181818 0%, #2f4737 100%); width:100%;height:100%; }
+.tp8 { background: linear-gradient(135deg, #111 0%, #22382b 100%); width:100%;height:100%; }
+.tp9 { background: linear-gradient(135deg, #171717 0%, #314c3a 100%); width:100%;height:100%; }
 .proj-name {
   font-size: 15px;
   color: #d0ccc4;
@@ -459,6 +464,34 @@ body {
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 14px;
+}
+.portfolio-pages {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(72%, 72%);
+  gap: 18px;
+  margin-top: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.portfolio-pages::-webkit-scrollbar {
+  height: 6px;
+}
+.portfolio-pages::-webkit-scrollbar-thumb {
+  background: rgba(16,171,73,0.35);
+  border-radius: 999px;
+}
+.portfolio-page {
+  scroll-snap-align: start;
+  width: 100%;
+  height: auto;
+  border: 1px solid #232323;
+  background: #0f0f0f;
+  border-radius: 6px;
+  display: block;
 }
 .detail-tag {
   font-size: 11px;
@@ -877,6 +910,15 @@ body {
   .detail-panel {
     padding: 22px 16px 22px 16px;
     margin: 0 -16px;
+  }
+
+  .portfolio-pages {
+    grid-auto-columns: 88%;
+    gap: 12px;
+  }
+
+  .portfolio-page {
+    height: auto;
   }
 
   .detail-top,

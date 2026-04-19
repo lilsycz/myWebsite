@@ -450,7 +450,7 @@ body {
   line-height: 1.8;
   padding-left: 14px;
   position: relative;
-  max-width: 560px;
+  max-width: auto;
 }
 .detail-bullets li::before {
   content: '·';
@@ -460,6 +460,7 @@ body {
   opacity: 0.5;
 }
 .detail-tags {
+  color: var(--green-accent);
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -492,6 +493,72 @@ body {
   background: #0f0f0f;
   border-radius: 6px;
   display: block;
+  cursor: zoom-in;
+}
+
+/* ── LIGHTBOX ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0,0,0,0.92);
+  align-items: center;
+  justify-content: center;
+}
+.lightbox.open {
+  display: flex;
+}
+.lb-img {
+  max-width: calc(100vw - 120px);
+  max-height: calc(100vh - 80px);
+  object-fit: contain;
+  border-radius: 4px;
+  display: block;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.lb-close {
+  position: fixed;
+  top: 20px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  transition: color 0.15s;
+}
+.lb-close:hover { color: #fff; }
+.lb-prev, .lb-next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  font-size: 36px;
+  cursor: pointer;
+  padding: 12px 20px;
+  transition: color 0.15s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.lb-prev { left: 16px; }
+.lb-next { right: 16px; }
+.lb-prev:hover, .lb-next:hover { color: #fff; }
+.lb-prev.hidden, .lb-next.hidden { visibility: hidden; }
+.lb-counter {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.45);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
 }
 .detail-tag {
   font-size: 11px;
@@ -500,8 +567,13 @@ body {
   padding: 3px 9px;
   border-radius: 99px;
   letter-spacing: 0.06em;
-  opacity: 0.7;
   font-family: 'DM Mono', monospace;
+  transition: background 0.15s, color 0.15s;
+  cursor: default;
+}
+.detail-tag:hover {
+  background: var(--green-accent);
+  color: #fff;
 }
 
 /* ── EXPERIENCE ── */

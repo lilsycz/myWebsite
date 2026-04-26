@@ -157,3 +157,29 @@ window.addEventListener('resize', function() {
 
 updateActiveSidebarLink();
 updatePosterNameContrast();
+
+(function() {
+  var preview = document.getElementById('proj-preview');
+  var previewImg = document.getElementById('proj-preview-img');
+
+  document.querySelectorAll('.proj-row[data-preview]').forEach(function(row) {
+    row.addEventListener('mouseenter', function() {
+      previewImg.src = row.dataset.preview;
+      preview.classList.add('visible');
+    });
+
+    row.addEventListener('mousemove', function(e) {
+      var x = e.clientX;
+      var y = e.clientY;
+      var pw = preview.offsetWidth;
+      // flip to left side if too close to right edge
+      var left = (x + 18 + pw > window.innerWidth) ? x - pw - 18 : x + 18;
+      preview.style.left = left + 'px';
+      preview.style.top = y + 'px';
+    });
+
+    row.addEventListener('mouseleave', function() {
+      preview.classList.remove('visible');
+    });
+  });
+})();
